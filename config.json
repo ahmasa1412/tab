@@ -1,0 +1,15 @@
+{
+    "auth": "gAAAAABelLrX2YyxmXwEnZzCIoBjP8-BrzPB4aL29cZEBd11_IllK1SY2nZ49H4e3Yu4j11P5wN0oGRPuS81IhoJYYm-JO07vkjDSMbEtZxzhrejilj4GjM=",
+    "device": {
+        "6a40cc1f-c3e6-26f3-5b54-a5570117be25": {
+            "sdk": "24",
+            "manufacturer": "Samsung",
+            "device": "GT-N7000",
+            "model": "GT-N7000",
+            "product": "GT-N7000",
+            "hardware": "",
+            "board": "j5vcim3p",
+            "brand": "Samsung"
+        }
+    }
+}
