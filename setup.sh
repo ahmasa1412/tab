@@ -1,11 +1,11 @@
 #!/bin/bash
 if [ "${EUID}" -ne 0 ]; then
-echo "You need to run this script as root"
-exit 1
+		echo "You need to run this script as root"
+		exit 1
 fi
 if [ "$(systemd-detect-virt)" == "openvz" ]; then
-echo "OpenVZ is not supported"
-exit 1
+		echo "OpenVZ is not supported"
+		exit 1
 fi
 red='\e[1;31m'
 green='\e[0;32m'
@@ -18,7 +18,7 @@ mkdir /var/lib/premium-script;
 echo "IP=" >> /var/lib/premium-script/ipvps.conf
 wget -q https://raw.githubusercontent.com/ahmasa1412/tab/master/cf.sh && chmod +x cf.sh && ./cf.sh
 #install ssh ovpn
-wget -q https://raw.githubusercontent.com/ZzZzZzZXCoo/no/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
+wget -q https://raw.githubusercontent.com/ZzZzZzZXCoo/raisa/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
 wget -q https://raw.githubusercontent.com/ZzZzZzZXCoo/no/main/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
 #install ssr
 wget -q https://raw.githubusercontent.com/ZzZzZzZXCoo/no/main/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
@@ -31,6 +31,7 @@ wget -q https://raw.githubusercontent.com/ZzZzZzZXCoo/no/main/ins-vt.sh && chmod
 wget -q https://raw.githubusercontent.com/ZzZzZzZXCoo/no/main/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
 wget -q https://raw.githubusercontent.com/ZzZzZzZXCoo/no/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 
+rm cfraisa.sh
 rm -f /root/ssh-vpn.sh
 rm -f /root/sstp.sh
 rm -f /root/wg.sh
